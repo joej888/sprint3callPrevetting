@@ -1,0 +1,64 @@
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: App microservice for call prevetting
+tags:
+  - name: Call Prevetting
+schemes:
+  # tip: remove http to make production-grade
+  - http
+  - https
+# format of bodies a client can send (Content-Type)
+consumes:
+  - application/json
+# format of the responses to the client (Accepts)
+produces:
+  - application/json
+paths:
+  tmf-api/party/v4/individual/validate:
+    get:
+      tags:
+        - "Call Prevetting"
+      operationId: callPreVetting
+      consumes:
+        - application/json
+      parameters:
+        - in: query
+          name: idNumber
+          type: string
+          required: true
+        - in: query
+          name: idType
+          type: string
+          required: true
+      responses:
+        200:
+          description: Success
+          schema:
+            $ref: "#/definitions/CallPrevetting-Model"
+        400:
+          description: Missing required input parameter
+        401:
+          description: Not authorized
+        424:
+          description: Upstream call failed with a 500. Response will be identical to upstream failure
+        500:
+          description: Technical error occured, service failure.
+  /swagger:
+    x-swagger-pipe: swagger_raw
+
+# complex objects have schema definitions
+definitions:
+  CallPrevetting-Model:
+    type: object
+    properties:
+      partyCharacteristic:
+        type: array
+        items:
+          type: object
+          properties:
+            name:
+              type: string
+            value:
+              type: string
+
