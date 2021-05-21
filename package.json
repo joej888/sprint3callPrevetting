@@ -59,7 +59,7 @@
     "check": "npm run audit && npm outdated --depth 0",
     "coverage": "nyc --reporter=lcov --reporter=text --reporter=html npm test",
     "lint": "eslint src test",
-    "start": "nodemon app.js",
+    "start": "node app.js",
     "test": "cross-env NODE_ENV=test mocha --recursive --require @babel/register test --exit",
     "validate": "npm run lint && npm test"
   },
