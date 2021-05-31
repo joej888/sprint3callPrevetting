@@ -6,4 +6,4 @@ data:
   log.level: debug
   sentry.dsn: "https://e7711b7ed2a34b9baff852b63240f023@o185340.ingest.sentry.io/5746935"
   sentry.maxBreadcrumbs: "99"
-  sentry.httpProxy: "http://zamdh13001p1.vodacom.corp:8080"
+  sentry.httpProxy: "http://vod-ms-egress-proxy.cluster-services:3128"

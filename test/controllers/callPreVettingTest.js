@@ -54,7 +54,7 @@ describe('Get Call Prevetting controller', function () {
   it('returns expected response when ok is true', async () => {
     req.query = {
       idNumber: 'KJHL4589',
-      idType: 'PASSPORT',
+      idType: 'PASSPORT'
     };
     const expectedParams = {
       headers: req.headers,
@@ -69,19 +69,20 @@ describe('Get Call Prevetting controller', function () {
     await controller(req, res, next);
     expect(res._getStatusCode()).to.equal(httpStatus.OK);
     const response = JSON.parse(res._getData());
+
     expect(response).to.deep.equal(success.expected.data);
   });
 
   it('invokes error middleware correctly when ok is false', async () => {
     req.params = {
       idNumber: 'KJHL4589',
-      idType: 'PASSPORT',
+      idType: 'PASSPORT'
     };
 
     const expectedParams = {
       headers: req.headers,
       idNumber: req.query.idNumber,
-      idType: req.query.idType,
+      idType: req.query.idType
     };
 
     serviceStub

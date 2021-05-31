@@ -34,6 +34,4 @@
 
 # docker build files
 /**/src/main/docker/build/
-
 node_modules
-.vscode

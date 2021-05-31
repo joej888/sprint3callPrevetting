@@ -1,12 +1,11 @@
 {
-  "name": "vod-ms-upgrade-journey-authentication",
+  "name": "vod-ms-upgrade-journey-party",
   "version": "1.0.0-SNAPSHOT",
   "private": true,
-  "description": "generate otp",
+  "description": "Call Prevetting",
   "keywords": [],
   "vod-settings": {
     "teams": [
-      "Cloud_Mobile_Apps",
       "Cloud_Sales"
     ]
   },
@@ -28,7 +27,7 @@
     "vod-npm-restify-sanitize": "0.0.1",
     "vod-npm-sentry": "^2.1.4",
     "vod-npm-services": "2.2.195",
-    "vod-npm-utils": "^3.2.4",
+    "vod-npm-utils": "^4.1.1",
     "zipkin-instrumentation-restify": "^0.18.6"
   },
   "devDependencies": {

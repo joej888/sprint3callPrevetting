@@ -4,10 +4,10 @@ zipkin:
 
 sentry:
   httpProxy: null
-  dsn: https://8558bd3914c944a7bc02e9dc6da4f06b@o185340.ingest.sentry.io/5746930
+  dsn: https://e7711b7ed2a34b9baff852b63240f023@o185340.ingest.sentry.io/5746935
   maxBreadcrumbs: 30
   environment: LOCAL
-  enabled: true
+  enabled: false
 
 vod-npm-auth:
   authorization-loader:

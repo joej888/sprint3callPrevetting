@@ -40,7 +40,7 @@ log:
 zipkin:
   baseUri: http://vod-ms-zipkin-app:80/
   enabled: true
-  localServiceName: vod-ms-upgrade-journey-authentication
+  localServiceName: vod-ms-upgrade-journey-party
 
 sentry:
   httpProxy: http://vod-ms-egress-proxy.cluster-services:3128

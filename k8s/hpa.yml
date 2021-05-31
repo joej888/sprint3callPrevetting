@@ -1,0 +1,12 @@
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: vod-ms-upgrade-journey-party
+spec:
+  scaleTargetRef:
+    apiVersion: extensions/v1beta1
+    kind: Deployment
+    name: vod-ms-upgrade-journey-party
+  minReplicas: 2
+  maxReplicas: 4
+  targetCPUUtilizationPercentage: 70

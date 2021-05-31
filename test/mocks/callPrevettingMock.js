@@ -5,35 +5,35 @@ const success = {
     data: {
       messages: [],
       result: {
-        reason: "Eligible for placing another application.",
-        elligibleForVetting: true,
+        reason: 'Eligible for placing another application.',
+        elligibleForVetting: true
       },
       successful: false,
-      code: 0,
-    },
+      code: 0
+    }
   },
   expected: {
     data: {
       partyCharacteristic: [
         {
-          name: "reason",
-          value: "Eligible for placing another application.",
+          name: 'reason',
+          value: 'Eligible for placing another application.'
         },
         {
-          name: "elligibleForVetting",
-          value: true,
+          name: 'elligibleForVetting',
+          value: true
         },
         {
-          name: "successful",
-          value: false,
+          name: 'successful',
+          value: false
         },
         {
-          name: "code",
-          value: 0,
-        },
-      ],
-    },
-  },
+          name: 'code',
+          value: 0
+        }
+      ]
+    }
+  }
 };
 
 const failure = {
@@ -42,20 +42,20 @@ const failure = {
     error: {
       response: {
         status: 400,
-        statusText: "Bad Request",
-      },
-    },
+        statusText: 'Bad Request'
+      }
+    }
   },
   expected: {
     result: {
       status: 400,
-      error: "Bad Request",
-      message: "Bad Request",
-    },
-  },
+      error: 'Bad Request',
+      message: 'Bad Request'
+    }
+  }
 };
 
 module.exports = {
   success,
-  failure,
+  failure
 };
